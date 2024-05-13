@@ -102,7 +102,9 @@ Initializing PHY...
  IPv4 Gateway     : 192.168.0.100
 ************************************************
 Waiting for a new connection at port: 7
-*here you need to start the GUI and press the detect button*
+```diff
++here you need to start the GUI and press the detect button
+```
 Accepted a new connection!
 
 Data for inference are ready
@@ -116,5 +118,6 @@ Object detection bounding boxes:
   Blue circle 
 
   Blue star
-
-*the found objects will be displayed in the application*
+```diff
++the found objects will be displayed in the application
+```

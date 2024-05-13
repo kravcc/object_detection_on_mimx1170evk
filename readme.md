@@ -96,7 +96,9 @@ Initializing PHY...
  PROGRAMM START
 ************************************************
  IPv4 Address     : 192.168.0.102
+
  IPv4 Subnet mask : 255.255.255.0
+
  IPv4 Gateway     : 192.168.0.100
 ************************************************
 Waiting for a new connection at port: 7

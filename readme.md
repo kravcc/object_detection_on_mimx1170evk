@@ -6,7 +6,7 @@ NXP TFLite label image example [2] and NXP LwIP example [3] adjusted to run on M
 A 3-channel color image is set as an input to a quantized FOMO (Faster Objects, More Objects)
 convolutional neural network model [1] that detects objects in the input image into
 one of 9 output classes. The result is then transmitted over a TCP connection to a connected client 
-(a desktop application providing a Graphical User Interface).
+(a desktop application providing a Graphical User Interface). The model is trained on a custom dataset, which is uploaded here: https://github.com/kravcc/BP_dataset_and_results .
 
 HOW TO USE THE APPLICATION:
 To detect objects in the image, place the objects in front of the camera so that it fits into 

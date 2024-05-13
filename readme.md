@@ -16,37 +16,60 @@ Select UART in 'Project Options' during project import for using external debug 
 via UART (virtual COM port).
 
 [1] https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices
+
 [2] https://github.com/nxp-mcuxpresso/mcux-sdk-examples/tree/main/evkbmimxrt1170/eiq_examples/tflm_label_image
+
 [3] https://github.com/nxp-mcuxpresso/mcux-sdk-examples/tree/main/evkbmimxrt1170/lwip_examples/lwip_ipv4_ipv6_echo/freertos/cm7
 
 Files:
 
 BP_mimxrt1170/
+
   source/
+
     main.cpp - main file, entry point of the application in the main function
+
     labels.h - names of object classes
+
     timer.c - timer source code
+
     image/* - image capture and pre-processing code
+
     model/model_data.h - model data from the .tflite file
       converted to a C language array using the xxd tool
+
     model/model.cpp - model initialization and inference code
+
     model/model_all_ops_micro.cpp - model operations registration
+
     model/output_postproc.cpp - model output processing
+
     video/* - camera and display handling
+
   lwip/
+
     contrib/apps/tcpsrv/tcpsrv.cpp - main application cycle, TCP client-server logic code
 
 BP_gui/
+
   resources/* - pictures for visualization
+
   main.py - the main file that starts the application
+
   qrc_resources.py - binary representation of pictures
+
   settingWindow.py - setting view, geterated from QT Designer 
+
   table.py - main view, geterated from QT Designer
 
 tested_models/ - folder with all the models described in the bachelor's thesis
+
   config.cfg + yolov3.weights - YOLO model
+
   mobilenetSSDv2.tflite - MobilenetSSDv2 model
+
   nanodet-int8-quantized.tflite - Nannodet model
+
   ei-bp-int8.lite - FOMO model used in this project 
                     (trained using Edge Impulse Platform,
                     source: https://studio.edgeimpulse.com/)
@@ -73,7 +96,9 @@ Connect external 5V power to J43, set J38 to 1-2
 Prepare the Demo
 ================
 1. Connect a USB cable between the host PC and the OpenSDA USB port on the target board. 
+
 2. Open a serial terminal with the following settings:
+
    - 115200 baud rate
    - 8 data bits
    - No parity
